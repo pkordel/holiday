@@ -4,6 +4,10 @@ module Holiday
       @instance ||= new
     end
 
+    def self.instance=(instance)
+      @instance = instance
+    end
+
     def initialize
       @holiday_requests = []
     end
