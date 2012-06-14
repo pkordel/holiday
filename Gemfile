@@ -11,4 +11,5 @@ group :development do
   gem "cucumber", ">= 0"
   gem "bundler"
   gem "jeweler", "~> 1.8.3"
+  gem "chronic"
 end
