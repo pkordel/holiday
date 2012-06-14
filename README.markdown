@@ -18,13 +18,18 @@ The app contains 3 main parts:
 
 The app will work completely in memory, or with persistence. Just comment out the contents of ````config/initializers/repository_config.rb```` to run it in-memory.
 
-The goal was really to
+Some key things:
+
+* Our domain models know nothing about either the database or Rails
+* We use ActiveModel in Rails to show the holiday request form. This involves mapping our domain model to a kind of ActiveModel "presenter" and back.
 
 Talking points
 ==============
 
 Here's an incomplete list of stuff we didn't have time to address/just fudged
 
+* Fully flesh out persistent Employees, maybe with more data?
+* Sort out the HolidayRequestsController#create method - not sure how much of it belongs there.
 * Validations: where do they live?
 * Casting of types
 * How much of Rails should we use?
