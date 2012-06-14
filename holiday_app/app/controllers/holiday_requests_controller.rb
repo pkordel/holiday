@@ -11,7 +11,7 @@ class HolidayRequestsController < ApplicationController
   def create
     @holiday_request = HolidayRequest.new(params[:holiday_request])
 
-    employee = Holiday::Employee.for(@holiday_request.email)
+    employee = Holiday::Employee.new(@holiday_request.email)
     @errors = Holiday::AddHolidayRequest.new(Holiday::HolidayRepository.instance).call(employee, @holiday_request.starts_on, @holiday_request.ends_on)
 
     if @errors.empty?
