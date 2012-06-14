@@ -9,5 +9,6 @@ end
 
 $LOAD_PATH.unshift(File.dirname(__FILE__) + '/../../lib')
 require 'holiday'
+require 'chronic'
 
 require 'rspec/expectations'
