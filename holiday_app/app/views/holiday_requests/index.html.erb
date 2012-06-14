@@ -1,0 +1,8 @@
+<h1>Some holiday requests</h1>
+<%= link_to "New holiday request", new_holiday_request_path %>
+
+<ul>
+  <% @holiday_requests.each do |holiday_request| %>
+    <li><%= holiday_request.employee.email %>: <%= holiday_request.starts_on %> to <%= holiday_request.ends_on %></li>
+  <% end %>
+</ul>
