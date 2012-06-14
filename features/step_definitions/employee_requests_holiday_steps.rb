@@ -3,7 +3,7 @@ Given /^I have no other planned holidays$/ do
   holidays.size.should == 0
 end
 
-When /^I request a day off in the future$/ do
+When /^I request a holiday of two days in the future$/ do
   @employee = Employee.new("bob@example.com")
   @next_wednesday = Chronic.parse("next wednesday + 1")
   @next_thursday = @next_wednesday + 1.day

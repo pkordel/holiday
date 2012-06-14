@@ -5,5 +5,5 @@ Feature: Employee requests holiday
 
   Scenario: Employee successfully requests holiday
     Given I have no other planned holidays
-    When I request a day off in the future
+    When I request a holiday of two days in the future
     Then that holiday request is logged
