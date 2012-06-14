@@ -4,6 +4,6 @@ class AddHolidayRequest
   end
 
   def call(employee, date)
-    @holiday_repository.add(HolidayRequestFactory.build(employee, date))
+    @holiday_repository.add(HolidayRequest.build(employee, date))
   end
 end

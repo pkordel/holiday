@@ -7,7 +7,7 @@ describe AddHolidayRequest do
     date = stub
     holiday_request = stub
 
-    HolidayRequestFactory.stub(:build).with(employee, date).and_return(holiday_request)
+    HolidayRequest.stub(:build).with(employee, date).and_return(holiday_request)
     repository.should_receive(:add).with(holiday_request)
     AddHolidayRequest.new(repository).call(employee, date)
   end

@@ -5,4 +5,8 @@ class HolidayRequest
     @starts_on = date
     @ends_on = date
   end
+
+  def self.build(employee, date)
+    HolidayRequest.new(employee, date)
+  end
 end
