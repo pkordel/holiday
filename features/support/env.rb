@@ -16,3 +16,7 @@ require 'active_support/core_ext/date/acts_like'
 require 'active_support/core_ext/numeric/time'
 
 require 'rspec/expectations'
+
+# This means we don't have to namespace our classes in our tests
+include Holiday
+

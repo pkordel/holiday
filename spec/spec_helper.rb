@@ -8,6 +8,8 @@ require 'active_support/core_ext/date/calculations'
 require 'active_support/core_ext/date/acts_like'
 require 'active_support/core_ext/numeric/time'
 
+# This means we don't have to namespace our classes in our tests
+include Holiday
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.

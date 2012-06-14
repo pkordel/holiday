@@ -1,6 +1,8 @@
-class Employee
-  attr_reader :email
-  def initialize(email)
-    @email = email
+module Holiday
+  class Employee
+    attr_reader :email
+    def initialize(email)
+      @email = email
+    end
   end
 end
