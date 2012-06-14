@@ -1,3 +1,8 @@
+PATH
+  remote: ../holiday
+  specs:
+    holiday (0.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -85,5 +90,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  holiday!
   jquery-rails
   rails (= 3.2.6)
