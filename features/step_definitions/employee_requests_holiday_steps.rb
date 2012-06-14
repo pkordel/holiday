@@ -4,7 +4,7 @@ Given /^I have no other planned holidays$/ do
 end
 
 When /^I request a day off in the future$/ do
-  @employee = Employee.new
+  @employee = Employee.new("bob@example.com")
   @next_wednesday = Chronic.parse("next wednesday + 1")
   @next_thursday = @next_wednesday + 1.day
   AddHolidayRequest.new(HolidayRepository.instance).call(@employee, @next_wednesday, @next_thursday)
