@@ -1,12 +1,12 @@
 class HolidayRequest
   attr_reader :employee, :starts_on, :ends_on
-  def initialize(employee, date)
+  def initialize(employee, start_date, end_date)
     @employee = employee
-    @starts_on = date
-    @ends_on = date
+    @starts_on = start_date
+    @ends_on = end_date
   end
 
-  def self.build(employee, date)
-    HolidayRequest.new(employee, date)
+  def self.build(employee, start_date, end_date)
+    HolidayRequest.new(employee, start_date, end_date)
   end
 end
