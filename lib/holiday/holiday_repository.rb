@@ -8,7 +8,7 @@ module Holiday
       @holiday_requests = []
     end
 
-    def all_holidays
+    def all_holiday_requests
       @holiday_requests
     end
 

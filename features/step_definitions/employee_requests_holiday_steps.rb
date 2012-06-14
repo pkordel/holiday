@@ -1,5 +1,5 @@
 Given /^I have no other planned holidays$/ do
-  holidays = HolidayRepository.instance.all_holidays
+  holidays = HolidayRepository.instance.all_holiday_requests
   holidays.size.should == 0
 end
 
@@ -11,7 +11,7 @@ When /^I request a day off in the future$/ do
 end
 
 Then /^that holiday request is logged$/ do
-  holidays = HolidayRepository.instance.all_holidays
+  holidays = HolidayRepository.instance.all_holiday_requests
   holidays.size.should == 1
   holidays.first.employee.should == @employee
   holidays.first.starts_on.should == @next_wednesday
