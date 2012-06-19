@@ -1,5 +1,8 @@
 module Holiday
   class HolidayRepository
+    # We somehow appear to have a singleton here. Why?
+    # Would it be better to have static methods which delegated to an instance?
+    # This would help us lose the HolidayRepository.instance.blah
     def self.instance
       @instance ||= new
     end
