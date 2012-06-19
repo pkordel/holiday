@@ -16,6 +16,7 @@ describe HolidayRepository do
   it "allows for different instances" do
     new_repository = stub
     HolidayRepository.instance = new_repository
-    HolidayRepository.instance.should == new_repository
+    new_repository.should_receive(:add)
+    HolidayRepository.add
   end
 end

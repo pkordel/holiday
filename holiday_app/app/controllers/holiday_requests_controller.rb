@@ -13,7 +13,7 @@ class HolidayRequestsController < ApplicationController
 
     # I'm sure this will change once we have persisted employees, but should we be passing an employee ID to the holiday request?
     employee = Holiday::Employee.new(@holiday_request.email)
-    @errors = Holiday::AddHolidayRequest.new(Holiday::HolidayRepository.instance).call(employee, @holiday_request.starts_on, @holiday_request.ends_on)
+    @errors = Holiday::AddHolidayRequest.new.call(employee, @holiday_request.starts_on, @holiday_request.ends_on)
 
     if @errors.empty?
       redirect_to holiday_requests_path

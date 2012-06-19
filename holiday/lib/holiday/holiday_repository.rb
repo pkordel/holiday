@@ -1,14 +1,19 @@
 module Holiday
   class HolidayRepository
-    # We somehow appear to have a singleton here. Why?
-    # Would it be better to have static methods which delegated to an instance?
-    # This would help us lose the HolidayRepository.instance.blah
-    def self.instance
-      @instance ||= new
-    end
 
-    def self.instance=(instance)
-      @instance = instance
+    class << self
+      extend Forwardable
+
+      def instance
+        @instance ||= new
+      end
+      private :instance
+
+      def instance=(instance)
+        @instance = instance
+      end
+
+      def_delegators :instance, :all_holiday_requests, :add
     end
 
     def initialize
