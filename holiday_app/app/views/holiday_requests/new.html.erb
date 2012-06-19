@@ -3,7 +3,7 @@
 <% end %>
 
 <%= form_for @holiday_request do |f| %>
-  Email: <%= f.text_field :email %>
+  Employee: <%= f.select :employee_id, @employees.map {|employee| [employee.email, employee.id]} %>
   <br/>
   Starts on: <%= f.date_select :starts_on %>
   <br/>

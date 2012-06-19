@@ -12,3 +12,10 @@ task "db:migrate" do
   ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => "db/holiday_development.sqlite3")
   Holiday::ActiveRecordHolidayRepository.migrate
 end
+
+desc "Seed daabase with some data"
+task "db:seed" do
+  require File.join(File.dirname(__FILE__), 'config/initializers/repository_config')
+  Holiday::EmployeeRepository.add(Holiday::Employee.new("foo@example.com"))
+  Holiday::EmployeeRepository.add(Holiday::Employee.new("bar@example.com"))
+end

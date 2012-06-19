@@ -5,9 +5,10 @@ end
 
 When /^I request a holiday of two days in the future$/ do
   @employee = Employee.new("bob@example.com")
+  EmployeeRepository.add(@employee)
   @next_wednesday = Chronic.parse("next wednesday + 1")
   @next_thursday = @next_wednesday + 1.day
-  AddHolidayRequest.new.call(@employee, @next_wednesday, @next_thursday)
+  AddHolidayRequest.new.call(@employee.id, @next_wednesday, @next_thursday)
 end
 
 Then /^that holiday request is logged$/ do
