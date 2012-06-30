@@ -16,7 +16,7 @@ The app contains 3 main parts:
 * holiday_app: the rails app
 * holiday_activerecord: an activerecord-powered implementation of the HolidayRepository.
 
-The app will work completely in memory, or with persistence. Just comment out the contents of ````config/initializers/repository_config.rb```` to run it in-memory.
+The app will work completely in memory, or with persistence. Just comment out the contents of ````config/initializers/repository_config.rb```` to run it in-memory. You may want to run ````rake db:migrate```` and ````rake db:seed```` in the holiday_app directory to get some test employees with the ActiveRecord version.
 
 Some key things:
 
