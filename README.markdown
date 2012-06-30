@@ -1,7 +1,7 @@
 I'm not sure what's going on here...
 ====================================
 
-Neither are we.
+Neither are we. Here are some blog posts on the [how](http://ohthatjames.github.com/2012/06/30/rails-without-rails-code/) and the [why](http://ohthatjames.github.com/2012/06/30/rails-without-rails-code/).
 
 For a [notonthehighstreet.com](http://www.notonthehighstreet.com) hackday, James (@ohthatjames) and Roland (@knaveofdiamonds) attempted to write a Rails app without Rails. It kind of amalgamated [Matt Wynne and Steve Tooke's talk on Hexagonal Rails](http://skillsmatter.com/podcast/home/hexagonal-rails) with Uncle Bob's talk on ["Architecture: the lost years"](http://www.youtube.com/watch?v=WpkDN78P884) with our own random thoughts. We were really trying to answer the question: "what happens if we just use Rails for what it's _really_ good at?"
 
