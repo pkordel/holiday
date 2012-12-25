@@ -1,3 +1,5 @@
+require 'forwardable'
+
 require 'holiday/add_holiday_request'
 require 'holiday/employee'
 require 'holiday/employee_repository'
