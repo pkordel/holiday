@@ -1,3 +1,4 @@
+require 'active_model'
 require 'forwardable'
 
 require 'holiday/add_holiday_request'
