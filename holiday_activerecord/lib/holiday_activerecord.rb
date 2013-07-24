@@ -5,7 +5,7 @@ require 'employee_activerecord'
 module Holiday
   class ActiveRecordHolidayRepository
     def self.migrate
-      ActiveRecord::Migrator.migrate(File.expand_path(File.dirname(__FILE__) + "/../db/migrate/"))
+      ActiveRecord::Migrator.migrate(File.expand_path(__dir__ + "/../db/migrate/"))
     end
 
     def all_holiday_requests
